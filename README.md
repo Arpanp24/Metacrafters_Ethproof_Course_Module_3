@@ -33,7 +33,8 @@ function mintTokens(address _to, uint256 _value) external {
 
 Burning Tokens
 The burn function allows you to destroy a certain number of tokens from your own balance, provided you have a sufficient balance.
-```
+
+```solidity
 function burn(uint256 _value) external {
     require(balances[msg.sender] >= _value, "Insufficient balance");
     totalSupply -= _value;
