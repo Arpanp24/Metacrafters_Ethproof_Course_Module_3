@@ -29,3 +29,26 @@ function mintTokens(address _to, uint256 _value) external {
     totalSupply += _value;
     balances[_to] += _value;
 }
+```
+
+Burning Tokens
+The burn function allows you to destroy a certain number of tokens from your own balance, provided you have a sufficient balance.
+```
+function burn(uint256 _value) external {
+    require(balances[msg.sender] >= _value, "Insufficient balance");
+    totalSupply -= _value;
+    balances[msg.sender] -= _value;
+}
+```
+
+## Features
+Simple and easy-to-understand implementation.
+Minting and burning functionalities for managing token supply.
+
+## Real-World Example
+Here's a real-world example of how you might use the MyToken contract:
+
+Suppose you are creating a loyalty program for your e-commerce platform. You can deploy the MyToken contract and use it to mint loyalty tokens to reward your customers for making purchases. Customers can then burn these tokens to redeem discounts or other benefits.
+
+
+
