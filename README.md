@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>MyToken Smart Contract</title>
-</head>
-<body>
-
 # MyToken Smart Contract
 
 ## Introduction
